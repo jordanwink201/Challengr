@@ -16,6 +16,7 @@ angular.module('App.profile', [])
   self.getUserInfo = function () {
     self.username = localStorage.getItem('com.challengr.firstName');
     self.photoURL = localStorage.getItem('com.challengr.photoURL');
+    console.log('GET USER INFO, self.photoURL : ', self.photoURL);
   };
 
   // Retreive user's information and display
@@ -39,9 +40,13 @@ angular.module('App.profile', [])
             userFactory.updateProfilePhoto(data.imageURL)
               .then(function () {
                 // Add the location to the user
+                console.log('NEW IMAGEEEEE : ', data.imageURL);
                 localStorage.setItem('com.challengr.photoURL', data.imageURL);
                 alertService.addAlert('success', 'updated profile image', 'icon-checkbox');
+                console.log('new image : ', data.imageURL);
+                
                 self.photoURL = data.imageURL;
+                
                 self.getUserInfo();
               })
               .catch(function (err) {
