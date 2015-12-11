@@ -95,7 +95,8 @@ angular.module('App.challengeDirective', [])
           $rootScope.globalRightDetailView = false;
 
           // scroll to top
-          $location.hash('top');
+          $anchorScroll.yOffset = 0
+          $location.hash();
           $anchorScroll();
 
           // open the detail view of the challenge...

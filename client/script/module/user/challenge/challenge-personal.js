@@ -32,7 +32,8 @@ angular.module('App.personalChallenge', [])
     if (event.toElement.classList[0] !== 'noViewChange') {
 
       // scroll to top
-      $location.hash('seg');
+      $anchorScroll.yOffset = 0
+      $location.hash();
       $anchorScroll();
 
       $rootScope.globalLeftDetailView = false;
