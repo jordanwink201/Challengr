@@ -18,6 +18,9 @@ header{
   
   i{
     font-size: 300%;
+    &:hover{
+      color: $blue;
+    }
   }
 }
 
