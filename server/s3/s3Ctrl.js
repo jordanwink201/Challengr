@@ -63,9 +63,7 @@ module.exports = function (db) {
       });
       // Create Buffer
       var imageBuffer = new Buffer(req.body.imageData.replace(/^data:image\/\w+;base64,/, ''), 'base64');
-
-      // user
-      var userURL = 'profileImages/' + req.user.firstName + '/profileImg.png';  
+      var userURL = 'profileImages/' + req.body.imgName + '/profileImg.png';
 
       // Define Upload Params
       var data = {
