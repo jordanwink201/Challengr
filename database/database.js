@@ -18,8 +18,8 @@ var db = new sequelize(
     dialect: 'mysql',
     pool: {
       max: 10,
-      min: 2,
-      idle: 100000
+      min: 1,
+      idle: 100000000
     },
     logging : false
   });

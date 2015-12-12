@@ -4,12 +4,6 @@ server.js
 express/node server 
 
 */
-
-// load environment variables from .env file
-require('dotenv').config({
-  path: __dirname + '/../.env'
-});
-
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
