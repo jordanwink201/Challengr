@@ -3,7 +3,6 @@ var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var nodemon = require('gulp-nodemon');
 var autoprefixer = require('gulp-autoprefixer');
 var sequence = require('run-sequence');
@@ -32,7 +31,6 @@ gulp.task('deployScripts', function () {
   gulp.src(['./client/app.js', './client/script/**/*.js'])
     .pipe(stripDebug())
     .pipe(concat('scripts.js'))
-    .pipe(uglify())
     .pipe(gulp.dest('./client/'))
 });
 
