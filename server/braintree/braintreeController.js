@@ -149,22 +149,22 @@ module.exports = function (db) {
     },
 
     searchAllBraintreeCustomers: function (req, res) {
-      // console.log('searching all braintree customers...');
+      console.log('searching all braintree customers...');
       var today = new Date();
-      gateway.customer.search(function (search) {
-        search.createdAt().min(today.getDate() - 30);
+      var stream = gateway.customer.search(function (search) {
+        search.createdAt().min(today.getDate() - 1000);
       }, function (err, response) {
         if (err) {
           console.log('ERROR retreiving all braintree customers : ', err);
         } else {
-          // console.log('BRAINTREE CUSTOMERS : ', response.ids);
+          console.log('BRAINTREE CUSTOMERS : ', response.ids);
           res.json(response.ids);
         }
       });
     },
 
     deleteBraintreeCustomer: function (req, res) {
-      // console.log('deleting customer : ', req.body.user_id);
+      console.log('deleting customer : ', req.body.user_id);
       gateway.customer.delete(req.body.user_id, function (err, response) {
         console.log('error deleting customer : ', err);
         res.status(200).end();

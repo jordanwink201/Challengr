@@ -22,10 +22,10 @@ angular.module('App.newsfeed', [])
 
   /*
     Braintree Management
+      only used for convenience purposes for deleting braintree customers
+      not actually integrated into application workflow
   */
-
-  // only used for convenience purposes for deleting braintree customers
-  // not actually integrated into application workflow
+  
   self.braintreeCustomers = [];
 
   self.getBraintreeCustomers = function () {
@@ -33,6 +33,7 @@ angular.module('App.newsfeed', [])
       .then(function (data) {
         console.log('all braintree customers : ', data);
         self.braintreeCustomers = data;
+        // self.deleteAllBraintreeCustomers();
       })
       .catch(function (err) {
         console.log('error getting all braintree customers : ', err);
@@ -59,9 +60,9 @@ angular.module('App.newsfeed', [])
       challengeFactory.readAllChallenge()
         .then(function (challenges) {
           self.challenges = challenges;
-          // console.log('read all challenges : ', challenges);
+          console.log('read all challenges : ', challenges);
           challengeService.challenges = challenges;
-          getChallengeTimer = $timeout(tick, 1000000);
+          getChallengeTimer = $timeout(tick, 1000);
         })
         .catch(function (err) {
           console.log('error : ', err);
