@@ -19,6 +19,10 @@
   -> formate issues on Safari
   -> firefox 'event.toElement' event is undefined, cannot view detail of challenge
 
+### Polling for Challenges
+- every 2000 ms
+- configured in newsfeed.js & challenge-personal.js
+
 ###Installing Dependencies
   From the project root directory run
     ```sh
