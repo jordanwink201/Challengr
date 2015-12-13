@@ -5,6 +5,7 @@
 
     <p class="mk" ng-show="profileCtrl.transactions.length === 0">Currently, no transactions have been made</p>
 
+    
     <ul class="list-group billings noCenterTxt">
       <li class="list-group-item" ng-repeat="transaction in profileCtrl.transactions">
         <span class="date">{{transaction.created | date : fullDate}}</span>
@@ -13,6 +14,7 @@
         <img ng-src="{{transaction.imgUrl}}">
       </li>
     </ul>
+
 
   </div>
 </div>

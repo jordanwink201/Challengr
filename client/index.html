@@ -57,7 +57,7 @@
   <!-- For Rest of Application -->
   <div id="leftBar" class="above" ng-if="!signupOrLoginPage" ng-class="{ flexContainer : justifyCenterLeftBar, darkContainer : darkThemeLeftBar }" ui-view="leftPane"></div>
   
-  <div id="rightBar" class="above" ng-if="!signupOrLoginPage" ng-class="{ flexContainer : justifyCenterRightBar, darkContainer : darkThemeRightBar }" ui-view="rightPane"></div>
+  <div id="rightBar" class="above" ng-if="!signupOrLoginPage" ng-class="{ scrollY : scrollY, flexContainer : justifyCenterRightBar, darkContainer : darkThemeRightBar }" ui-view="rightPane"></div>
 
   <!-- Spinner -->
   <div ng-controller="loadingController as loadingController">
