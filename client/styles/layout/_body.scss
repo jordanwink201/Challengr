@@ -9,6 +9,9 @@ body{
 .scrollY{
   overflow-y: scroll;
 }
+.littleShadow{
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.09) !important;
+}
 
 div#searchBar{
   display: flex;

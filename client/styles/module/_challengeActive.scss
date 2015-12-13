@@ -124,19 +124,23 @@ challenge {
   img {
     border-radius: 50%;
     width: 100%;
+    min-height: 100%;
   }
   img.challengedImg {
     position: absolute;
     bottom: 0;
     left: 0px;
     width: 40%;
+    min-height: 40%;
   }
   img.challengerImg {
     width: 70%;
     margin-left: 10px;
+    min-height: 70%;
   }
   img.challengedImage {
     width: 100%;
+    min-height: 100%;
   }
 }
 

@@ -11,6 +11,7 @@
     margin-bottom: 15px;
     max-width: 35%;
     margin: auto;
+    min-height: 35%;
   }
   // align-items: center;
   // justify-content: center;
@@ -47,6 +48,7 @@ ul.friendList {
     }
     img {
       width: 10%;
+      min-height: 10%;
       border-radius: 50%;
       display: inline-block;
       border: 1px solid white;
