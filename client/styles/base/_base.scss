@@ -30,6 +30,10 @@ body {
   font-family: $font;
 }
 
+.fullWidth{
+  width: 100%;
+}
+
 // GLOBAL
 .blue{ color: $blue !important; }
 .fullHeight{ height: 100vh !important; }

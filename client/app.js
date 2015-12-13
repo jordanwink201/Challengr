@@ -266,7 +266,6 @@ angular.module('App', [
 
     // Dark Background Left Bar
     if (toState.url === '/challenge/create/detail' ||
-        toState.url === '/challenge/create/payment' ||
         toState.url === '/profile')
     {
       $rootScope.darkThemeLeftBar = true;
@@ -276,7 +275,8 @@ angular.module('App', [
 
     // Dark Background Right Bar
     if (toState.url === '/' ||
-      toState.url === 'challenge/detail/:id')
+        toState.url === 'challenge/detail/:id' || 
+        toState.url === 'challenge/create/payment')
     {
       $rootScope.darkThemeRightBar = true;
     } else {
@@ -287,7 +287,6 @@ angular.module('App', [
     if (toState.url === '/profile' ||
         toState.url === '/challenge/create/charity' ||
         toState.url === '/challenge/create/detail' ||
-        toState.url === '/challenge/create/payment' ||
         toState.url === '/challenge/create/detail/:id') 
     {
       $rootScope.lightStyle = true;

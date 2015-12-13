@@ -59,7 +59,7 @@ angular.module('App.newsfeed', [])
       challengeFactory.readAllChallenge()
         .then(function (challenges) {
           self.challenges = challenges;
-          console.log('read all challenges : ', challenges);
+          // console.log('read all challenges : ', challenges);
           challengeService.challenges = challenges;
           getChallengeTimer = $timeout(tick, 1000);
         })

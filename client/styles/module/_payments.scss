@@ -4,6 +4,10 @@
 
 ***/
 
+.add-payment-method-view .payment-container{
+  background: transparent !important;
+}
+
 ul.list-group.billings {
   flex: 1;
   display: flex;
@@ -38,8 +42,8 @@ ul.list-group.billings {
     background-color: rgba(239, 240, 242, 0);
     border-color: white;
     padding: 10px 0;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid #1A2227;
+    color: #1A2227;
     transition: 0.3s;
     &:hover{
       background-color: #1779B2;

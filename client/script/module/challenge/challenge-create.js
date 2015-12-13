@@ -7,7 +7,7 @@ CRUD for challenges
 
 angular.module('App.newChallenge', [])
 
-.controller('challengeNewCtrl', ['userFactory', 'challengeFactory', 'loadingService', 'alertService', 'challengeService', 'charityFactory', 'braintreeFactory', '$window', '$state', 'socket', function (userFactory, challengeFactory, loadingService, alertService, challengeService, charityFactory, braintreeFactory, $window, $state, socket) {
+.controller('challengeNewCtrl', ['userFactory', 'challengeFactory', 'loadingService', 'alertService', 'challengeService', 'charityFactory', 'braintreeFactory', '$window', '$state', 'socket', '$document', function (userFactory, challengeFactory, loadingService, alertService, challengeService, charityFactory, braintreeFactory, $window, $state, socket, $document) {
 
   var self = this;
 
@@ -98,10 +98,12 @@ angular.module('App.newChallenge', [])
   /* Braintree get token from server to load drop-in UI */
   self.getToken = function () {
     var brainTreeUserID = $window.localStorage.getItem('com.braintree');
+
     if (brainTreeUserID) {
       braintreeFactory.getToken(brainTreeUserID)
         .then(function (token) {
           // console.log('successfully received braintree token');
+
           // initialize braintree dropin with client token
           braintree.setup(token, 'dropin', {
             container: 'payment-form',
