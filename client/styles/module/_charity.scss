@@ -13,20 +13,48 @@ label.absolute {
   margin-left: -122px;
 }
 
-#charityBG1 {
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)), url("https://s3-us-west-2.amazonaws.com/challengrimages/placeholder/onStreet.jpg") no-repeat;
+.overlayCharity1 {  
+  background-image: url("https://s3-us-west-2.amazonaws.com/challengrimages/placeholder/onStreet.jpg");
+  opacity: 0;
+  transition: opacity .3s ease;
+  flex: 1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   background-size: cover;
-  padding: 2em 2em 0 2em;
+  padding: 2em;
+}
+
+.overlayCharity2 {  
+  background-image: url("https://s3-us-west-2.amazonaws.com/challengrimages/placeholder/charity2.jpg");
+  opacity: 0;
+  transition: opacity .3s ease;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  padding: 2em;
+}
+
+#charityBG1 {
+  background: black;
+  width: 100%;
+  height: 100vh;
   // border: 1px solid red;
   display: flex;
   align-items: center;
+  &:hover .overlayCharity1{
+    opacity: 1;
+  }
   &:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://s3-us-west-2.amazonaws.com/challengrimages/placeholder/onStreet.jpg") no-repeat;
     cursor: pointer !important;
-    background-size: cover;
     a {
       text-decoration: none;
     }
@@ -48,18 +76,16 @@ label.absolute {
 }
 
 #charityBG2 {
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)), url("https://s3-us-west-2.amazonaws.com/challengrimages/placeholder/charity2.jpg") no-repeat;
+  background: black;
   width: 100%;
   height: 100vh;
-  position: relative;
-  background-size: cover;
-  padding: 2em 2em 0 2em;
   display: flex;
   align-items: center;
+  &:hover .overlayCharity2{
+    opacity: 1;
+  }
   &:hover {
     cursor: pointer !important;
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://s3-us-west-2.amazonaws.com/challengrimages/placeholder/charity2.jpg") no-repeat;
-    background-size: cover;
     a {
       text-decoration: none;
     }
