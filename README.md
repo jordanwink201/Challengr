@@ -15,6 +15,9 @@
 
 ### Known Issues & Future Optimizations
   When a challenge is active, the countdown timer is not calculated for the user challenges feed.
+  Optimized for Chrome v.30+
+  -> formate issues on Safari
+  -> firefox 'event.toElement' event is undefined, cannot view detail of challenge
 
 ###Installing Dependencies
   From the project root directory run
