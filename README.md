@@ -13,6 +13,9 @@
 ###Contributing
   Thank you for taking interest in contributing! In order to contribute please make yourself familiar with our Contribution and Style Guide. Check out our [Style Guide](docs/STYLE-GUIDE.md) and the [Tools](docs/TOOLS.md) we use to adhere to that Style Guide. Also please strictly follow our [Commit Message Guide](docs/COMMIT-MESSAGES.md) and [Workflow](docs/GIT-WORKFLOW.md) otherwise your pull requests will not be accepted.
 
+### Known Issues & Future Optimizations
+  When a challenge is active, the countdown timer is not calculated for the user challenges feed.
+
 ###Installing Dependencies
   From the project root directory run
     ```sh
