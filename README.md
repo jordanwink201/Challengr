@@ -23,6 +23,11 @@
 - every 2000 ms
 - configured in newsfeed.js & challenge-personal.js
 
+### Disclaimer
+- Optimized for Chrome
+- All payments are in Sandbox mode, no real transactions will take place. Can you paypal or testing credit card # 4111 1111 1111 1111 exp: anything after 2015 ex: 11/19
+
+
 ###Installing Dependencies
   From the project root directory run
     ```sh
