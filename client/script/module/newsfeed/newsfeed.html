@@ -15,22 +15,24 @@ Newsfeed in main view
 
 <p class="mk" ng-show="newsfeedCtrl.challenges.length === 0" ng-if="globalLeftDetailView">Currently, no challenges have been made</p>
 
-<!-- Challenges -->
-<challenge ng-if="globalLeftDetailView" ng-repeat="challenge in newsfeedCtrl.challenges | filter : challengeSearch"
-  challengeid = 'challenge.id',
-  challengechallenged = 'challenge.Challenged',
-  challengechallenger = 'challenge.Challenger',
-  charityamount = 'challenge.charityAmount',
-  title = 'challenge.title',
-  description = 'challenge.description',
-  likes = 'challenge.likes',
-  completeddate = 'challenge.completed',
-  expiresdate = 'challenge.expiresDate',
-  issueddate = 'challenge.issuedDate',
-  completed = 'challenge.completed',
-  notcompleted = 'challenge.notCompleted',
-  type = 'challenge.type'>
-</challenge>
+<div class="scroll">
+  <!-- Challenges -->
+  <challenge ng-if="globalLeftDetailView" ng-repeat="challenge in newsfeedCtrl.challenges | filter : challengeSearch"
+    challengeid = 'challenge.id',
+    challengechallenged = 'challenge.Challenged',
+    challengechallenger = 'challenge.Challenger',
+    charityamount = 'challenge.charityAmount',
+    title = 'challenge.title',
+    description = 'challenge.description',
+    likes = 'challenge.likes',
+    completeddate = 'challenge.completed',
+    expiresdate = 'challenge.expiresDate',
+    issueddate = 'challenge.issuedDate',
+    completed = 'challenge.completed',
+    notcompleted = 'challenge.notCompleted',
+    type = 'challenge.type'>
+  </challenge>
+</div>
 
 <!-- Braintree Management -->
 <!-- <div ng-init="homeCtrl.getBraintreeCustomers()"></div> -->
