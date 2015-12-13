@@ -20,12 +20,20 @@ challenge {
   padding-right: $padding * 2;
 }
 
+.scroll{
+  overflow-y: scroll;
+  width: 100%;
+  padding-left: $padding * 2;
+  padding-right: $padding * 2;
+}
+
 .challenge {
   margin: 0;
   margin-bottom: 10px;
   border: 1px solid rgba(222, 226, 229, 0.32);
   border-radius: 3px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
   /* padding: $padding; */
   &:hover {
     box-shadow: 0px 0px 10px #AFAFAF;
@@ -157,9 +165,8 @@ challenge {
   display: flex;
   border: 1px solid #DEE2E5;
   border-radius: 4px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   align-items: center;
+  position: relative;
   a {
     &:hover {
       text-decoration: none;

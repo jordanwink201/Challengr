@@ -245,6 +245,15 @@ angular.module('App', [
   $rootScope.globalRightDetailView = true;
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
 
+    // Overflow Y Scroll Right Bar
+    if (toState.url === '/profile' ||
+        toState.url === '/')
+    {
+      $rootScope.scrollY = true;
+    } else {
+      $rootScope.scrollY = false;
+    }    
+
     // Justify Content Center Left Bar
     if (toState.url === '/challenge/create/detail' ||
         toState.url === '/challenge/create/payment' ||
