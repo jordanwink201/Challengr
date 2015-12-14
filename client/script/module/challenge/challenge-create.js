@@ -7,7 +7,7 @@ CRUD for challenges
 
 angular.module('App.newChallenge', [])
 
-.controller('challengeNewCtrl', ['userFactory', 'challengeFactory', 'loadingService', 'alertService', 'challengeService', 'charityFactory', 'braintreeFactory', '$window', '$state', 'socket', '$document', function (userFactory, challengeFactory, loadingService, alertService, challengeService, charityFactory, braintreeFactory, $window, $state, socket, $document) {
+.controller('challengeNewCtrl', ['userFactory', 'challengeFactory', 'loadingService', 'alertService', 'challengeService', 'charityFactory', 'braintreeFactory', '$window', '$state', 'socket', function (userFactory, challengeFactory, loadingService, alertService, challengeService, charityFactory, braintreeFactory, $window, $state, socket) {
 
   var self = this;
 
@@ -56,7 +56,7 @@ angular.module('App.newChallenge', [])
   };
 
   /* Get all charities from DB */
-  self.getCharity = function () {
+  self.getCharities = function () {
     charityFactory.load()
       .then(function (charities) {
         self.charities = charities;
