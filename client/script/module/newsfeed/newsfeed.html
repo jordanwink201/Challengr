@@ -12,14 +12,14 @@ Newsfeed in main view
 <!-- Search Bar -->
 <div ng-init="newsfeedCtrl.read()" id="searchBar" class="marginTop leftSidePadding" ng-if="globalLeftDetailView">
   <i class="mk icon-budicon-44"></i>  
-  <input type="text" id="searchInput" class="form-control" placeholder="Search..." ng-model="challengeSearch">
+  <input type="text" id="searchInput" class="form-control" placeholder="Search..." ng-model="newsfeedCtrl.challengeSearch">
 </div>
 
 <!-- <p class="mk" ng-if="newsfeedCtrl.challenges.length === 0" ng-if="globalLeftDetailView">Currently, no challenges have been made</p> -->
 
-<div class="scroll wow fadeIn">
+<!-- <div class="scroll wow fadeIn"> -->
   <!-- Challenges -->
-  <challenge ng-if="globalLeftDetailView" ng-repeat="challenge in newsfeedCtrl.challenges | filter : challengeSearch"
+  <challenge ng-if="globalLeftDetailView" ng-repeat="challenge in newsfeedCtrl.challenges | filter : newsfeedCtrl.challengeSearch"
     challengeid = 'challenge.id',
     challengechallenged = 'challenge.Challenged',
     challengechallenger = 'challenge.Challenger',
@@ -34,7 +34,7 @@ Newsfeed in main view
     notcompleted = 'challenge.notCompleted',
     type = 'challenge.type'>
   </challenge>
-</div>
+<!-- </div> -->
 
 <!-- Braintree Management -->
 <!-- <div ng-init="homeCtrl.getBraintreeCustomers()"></div> -->
