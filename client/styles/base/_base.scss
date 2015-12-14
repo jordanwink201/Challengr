@@ -135,5 +135,8 @@ div.flex{
 }
 
 input {
- outline:none;
+ outline: none !important;
+ &:focus{
+  outline: none !important;
+ }
 }
