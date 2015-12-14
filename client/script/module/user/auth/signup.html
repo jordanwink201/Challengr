@@ -7,7 +7,8 @@ signup.html
 
 <div ng-include=" 'partial/alert.html' "></div>
 
-  <h1 class="mk white shadow">Sign Up</h1>
+<div class="wow fadeIn">
+  <h1 class="mk white shadow centerTxt">Sign Up</h1>
 
   <form class="mk" name= "signupForm" ng-submit="authCtrl.signup()">
 
@@ -31,12 +32,13 @@ signup.html
       <input  class="mk" ng-class="{ activeFront: focus3 }" ng-focus="focus3 = true" ng-blur="focus3 = false" ng-model="authCtrl.password" type="password" required>
     </div>
 
-    <div class="column">
+    <div class="column marginTop4">
       <button class="mk hoverShadow" type="submit">Sign Up</button>
     </div>  
   </form>
 
-  <span class="mk white">
+  <span class="mk white marginTop4 block centerTxt">
     Have an account? 
     <a class="mk" ui-sref="signin">Sign In</a>
   </span>
+</div>

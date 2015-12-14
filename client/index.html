@@ -30,15 +30,15 @@
             <div class="triangle"></div>
             <ul id="innerDropDown">
               <li ui-sref="newChallenge">
-                <i class="smaller icon-budicon-48 smallMargin blue"></i>
+                <i class="smaller icon-budicon-48 smallMargin"></i>
                 Create
               </li>
               <li ng-click="header.homeSetDetail()">
-                <i class="smaller icon-home smallMargin blue"></i>
+                <i class="smaller icon-home smallMargin"></i>
                 Home
               </li>
               <li ui-sref="profile">
-                <i class="smaller icon-budicon-20 smallMargin blue"></i>
+                <i class="smaller icon-budicon-20 smallMargin"></i>
                 Profile
               </li>
             </ul>
@@ -56,7 +56,7 @@
   <!-- For Rest of Application -->
   <div id="leftBar" class="above" ng-if="!signupOrLoginPage" ng-class="{ flexContainer : justifyCenterLeftBar, darkContainer : darkThemeLeftBar }" ui-view="leftPane"></div>
   
-  <div id="rightBar" class="above" ng-if="!signupOrLoginPage" ng-class="{ flexContainer : justifyCenterRightBar, darkContainer : darkThemeRightBar }" ui-view="rightPane"></div>
+  <div id="rightBar" class="above" ng-if="!signupOrLoginPage" ng-class="{ scrollY : scrollY, flexContainer : justifyCenterRightBar, darkContainer : darkThemeRightBar }" ui-view="rightPane"></div>
 
   <!-- Spinner -->
   <div ng-controller="loadingController as loadingController">
@@ -76,6 +76,10 @@
   <script src="lib/angular-moment/angular-moment.min.js"></script>
   <script src="http://fgnass.github.io/spin.js/spin.min.js"></script>
   <script src="lib/angular-spinner/angular-spinner.min.js"></script>
+  <script src="lib/wow/dist/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
   <!-- Concatenated Scripts -->
   <script src="scripts.js"></script>
 

@@ -16,16 +16,16 @@ angular.module('App.newsfeed', [])
   self.getChallengeTimer;
 
   // when changing views cancel the timer to reload challenges
-  // $scope.$on('$destroy', function (event) {
-  //   $timeout.cancel(self.getChallengeTimer);
-  // });
+  $scope.$on('$destroy', function (event) {
+    $timeout.cancel(self.getChallengeTimer);
+  });
 
   /*
     Braintree Management
+      only used for convenience purposes for deleting braintree customers
+      not actually integrated into application workflow
   */
-
-  // only used for convenience purposes for deleting braintree customers
-  // not actually integrated into application workflow
+  
   self.braintreeCustomers = [];
 
   self.getBraintreeCustomers = function () {
@@ -33,6 +33,7 @@ angular.module('App.newsfeed', [])
       .then(function (data) {
         console.log('all braintree customers : ', data);
         self.braintreeCustomers = data;
+        // self.deleteAllBraintreeCustomers();
       })
       .catch(function (err) {
         console.log('error getting all braintree customers : ', err);
@@ -61,7 +62,7 @@ angular.module('App.newsfeed', [])
           self.challenges = challenges;
           console.log('read all challenges : ', challenges);
           challengeService.challenges = challenges;
-          getChallengeTimer = $timeout(tick, 1000);
+          getChallengeTimer = $timeout(tick, 2000);
         })
         .catch(function (err) {
           console.log('error : ', err);

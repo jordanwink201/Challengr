@@ -20,12 +20,20 @@ challenge {
   padding-right: $padding * 2;
 }
 
+.scroll{
+  overflow-y: scroll;
+  width: 100%;
+  padding-left: $padding * 2;
+  padding-right: $padding * 2;
+}
+
 .challenge {
   margin: 0;
   margin-bottom: 10px;
   border: 1px solid rgba(222, 226, 229, 0.32);
   border-radius: 3px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
   /* padding: $padding; */
   &:hover {
     box-shadow: 0px 0px 10px #AFAFAF;
@@ -116,19 +124,23 @@ challenge {
   img {
     border-radius: 50%;
     width: 100%;
+    min-height: 100%;
   }
   img.challengedImg {
     position: absolute;
     bottom: 0;
     left: 0px;
     width: 40%;
+    min-height: 40%;
   }
   img.challengerImg {
     width: 70%;
     margin-left: 10px;
+    min-height: 70%;
   }
   img.challengedImage {
     width: 100%;
+    min-height: 100%;
   }
 }
 
@@ -157,9 +169,8 @@ challenge {
   display: flex;
   border: 1px solid #DEE2E5;
   border-radius: 4px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   align-items: center;
+  position: relative;
   a {
     &:hover {
       text-decoration: none;
@@ -222,3 +233,17 @@ challenge {
   color: $green !important;
 }
 
+.animation.ng-enter {
+  -webkit-transition: .2s ease-out;
+  margin-left: -30%;
+  opacity: 0;
+}
+
+.animation.ng-enter-stagger {
+  transition-delay: 0.1s;
+}
+
+.animation.ng-enter.ng-enter-active {
+  opacity: 1;
+  margin-left: 0;
+}

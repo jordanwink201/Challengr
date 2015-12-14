@@ -48,16 +48,19 @@ div#challengeDetail {
       img.challengedImg {
         border-radius: 50%;
         width: 100%;
+        min-height: 100%;
       }
       img.challengedImg {
         position: absolute;
         bottom: 0;
         left: 0px;
         width: 40%;
+        min-height: 40%;
       }
       img.challengerImg {
         width: 65%;
         margin-left: 10px;
+        min-height: 65%;
       }
     }
     span{

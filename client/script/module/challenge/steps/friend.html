@@ -8,8 +8,8 @@
 
 <p class="mk" ng-show="challengeNC.friends.length === 0">No friends at the moment...</p>
 
-<ul class="friendList" ng-init="challengeNC.loadFriends()">
-  <a class="noDecoration" ui-sref="createChallengeDetail" ng-repeat="friend in challengeNC.friends | filter : friendSearch | limitTo : 5">
+<ul class="friendList scroll" ng-init="challengeNC.loadFriends()">
+  <a class="noDecoration" ui-sref="createChallengeDetail" ng-repeat="friend in challengeNC.friends | filter : friendSearch | orderBy:'firstName'">
     <li ng-class="{ 'selected' : challengeNC.selectedFriend === $index }" ng-click="challengeNC.addFriend(friend, $index)">
       <img ng-src="{{friend.photoURL}}">
       <p>{{friend.firstName | capitalize}} {{friend.lastName | capitalize}}</p>

@@ -8,7 +8,7 @@ view large details of single challenge
 <!-- <div ng-class="{ flexContainer dark fullHeight : leftDetailViewRoute, flexContainer fullHeight : rightDetailViewRoute }"> -->
 <div class="flexContainer fullHeight" ng-class="{ dark : leftDetailViewRoute }">
 
-  <div id="challengeDetail" class="panel panel-default" ng-init="challengeViewCtrl.readChallenge()">
+  <div id="challengeDetail" class="panel panel-default" ng-init="challengeViewCtrl.configureDirective()">
     <div class="panel-heading">
       <div>
         <img class="challengerImg" ng-src="{{challengeViewCtrl.challenge.Challenger.photoURL}}">
@@ -36,7 +36,8 @@ view large details of single challenge
       <div class="time">
 
         <i class="mk icon-budicon-58" ng-class="{ failedClock : challengeViewCtrl.challenge.notCompleted, completedClock : challengeViewCtrl.challenge.completed }"></i>
-        <span am-time-ago="challengeViewCtrl.challenge.issuedDate"></span>
+        <span ng-if="challengeViewCtrl.challenge.notCompleted === false && challengeViewCtrl.challenge.completed === false">{{challengeViewCtrl.remaining}}</span>
+        <span ng-if="challengeViewCtrl.challenge.notCompleted === true || challengeViewCtrl.challenge.completed === true" am-time-ago="challengeViewCtrl.challenge.issuedDate"></span>
       </div>
     </div>
     <div class="panel-body">
@@ -63,11 +64,11 @@ view large details of single challenge
     </div>
   </div>
 
-  <button ng-if="challengeViewCtrl.isCurrentUserChallenge" ng-click="challengeViewCtrl.homeSetDetail()" class="mk-complete hoverShadow" ng-click="challengeViewCtrl.completed()">
+  <button ng-if="challengeViewCtrl.isCurrentUserChallenge" ng-click="challengeViewCtrl.homeSetDetail()" class="mk-complete littleShadow hoverShadow2" ng-click="challengeViewCtrl.completed()">
     Completed ?
   </button> 
 
-  <button class="mk hoverShadow" ng-click="challengeViewCtrl.homeSetDetail()">
+  <button class="mk hoverShadow2" ng-click="challengeViewCtrl.homeSetDetail()">
     View All
   </button>
 

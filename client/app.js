@@ -9,6 +9,7 @@ angular.module('App', [
   'ui.router',
   'ui.bootstrap',
   'ngMessages',
+  'ngAnimate',
   'angularMoment',
   'App.auth',
   'App.socket',
@@ -242,8 +243,16 @@ angular.module('App', [
   // Initial Value 
   $rootScope.globalLeftDetailView = true;
   $rootScope.globalRightDetailView = true;
-
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+
+    // Overflow Y Scroll Right Bar
+    if (toState.url === '/profile' ||
+        toState.url === '/')
+    {
+      $rootScope.scrollY = true;
+    } else {
+      $rootScope.scrollY = false;
+    }    
 
     // Justify Content Center Left Bar
     if (toState.url === '/challenge/create/detail' ||
@@ -265,7 +274,6 @@ angular.module('App', [
 
     // Dark Background Left Bar
     if (toState.url === '/challenge/create/detail' ||
-        toState.url === '/challenge/create/payment' ||
         toState.url === '/profile')
     {
       $rootScope.darkThemeLeftBar = true;
@@ -275,7 +283,8 @@ angular.module('App', [
 
     // Dark Background Right Bar
     if (toState.url === '/' ||
-      toState.url === 'challenge/detail/:id')
+        toState.url === 'challenge/detail/:id' || 
+        toState.url === 'challenge/create/payment')
     {
       $rootScope.darkThemeRightBar = true;
     } else {
@@ -286,7 +295,6 @@ angular.module('App', [
     if (toState.url === '/profile' ||
         toState.url === '/challenge/create/charity' ||
         toState.url === '/challenge/create/detail' ||
-        toState.url === '/challenge/create/payment' ||
         toState.url === '/challenge/create/detail/:id') 
     {
       $rootScope.lightStyle = true;

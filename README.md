@@ -13,6 +13,21 @@
 ###Contributing
   Thank you for taking interest in contributing! In order to contribute please make yourself familiar with our Contribution and Style Guide. Check out our [Style Guide](docs/STYLE-GUIDE.md) and the [Tools](docs/TOOLS.md) we use to adhere to that Style Guide. Also please strictly follow our [Commit Message Guide](docs/COMMIT-MESSAGES.md) and [Workflow](docs/GIT-WORKFLOW.md) otherwise your pull requests will not be accepted.
 
+### Known Issues & Future Optimizations
+  When a challenge is active, the countdown timer is not calculated for the user challenges feed.
+  Optimized for Chrome v.30+
+  -> formate issues on Safari
+  -> firefox 'event.toElement' event is undefined, cannot view detail of challenge
+
+### Polling for Challenges
+- every 2000 ms
+- configured in newsfeed.js & challenge-personal.js
+
+### Disclaimer
+- Optimized for Chrome
+- All payments are in Sandbox mode, no real transactions will take place. Can you paypal or testing credit card # 4111 1111 1111 1111 exp: anything after 2015 ex: 11/19
+
+
 ###Installing Dependencies
   From the project root directory run
     ```sh

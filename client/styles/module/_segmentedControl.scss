@@ -18,6 +18,12 @@ ul.nav.nav-tabs {
   border-top-left-radius: 0px;
 }
 
+.nav > li > a:hover, .nav > li > a:focus{
+  text-decoration: none;
+  background-color: $blue;
+  border-top-left-radius: 0px;
+}
+
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   border: 0px solid transparent;
   background-color: $blue;
@@ -52,7 +58,6 @@ ul.nav.nav-tabs {
     }
   }
 }
-
 
 .nav-tabs > li > a{
   padding: 9px;

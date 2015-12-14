@@ -56,7 +56,7 @@ angular.module('App.newChallenge', [])
   };
 
   /* Get all charities from DB */
-  self.getCharity = function () {
+  self.getCharities = function () {
     charityFactory.load()
       .then(function (charities) {
         self.charities = charities;
@@ -98,10 +98,12 @@ angular.module('App.newChallenge', [])
   /* Braintree get token from server to load drop-in UI */
   self.getToken = function () {
     var brainTreeUserID = $window.localStorage.getItem('com.braintree');
+
     if (brainTreeUserID) {
       braintreeFactory.getToken(brainTreeUserID)
         .then(function (token) {
           // console.log('successfully received braintree token');
+
           // initialize braintree dropin with client token
           braintree.setup(token, 'dropin', {
             container: 'payment-form',

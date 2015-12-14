@@ -30,6 +30,13 @@ body {
   font-family: $font;
 }
 
+.block{
+  display: block;
+}
+.fullWidth{
+  width: 100%;
+}
+
 // GLOBAL
 .blue{ color: $blue !important; }
 .fullHeight{ height: 100vh !important; }
@@ -125,4 +132,11 @@ div.flex{
 
 .white{
   color: white !important;
+}
+
+input {
+ outline:none !important;
+  &:focus{
+   outline:none !important;
+  }
 }

@@ -6,11 +6,19 @@ body{
   height: 100vh;
 }
 
+.scrollY{
+  overflow-y: scroll;
+}
+.littleShadow{
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.09) !important;
+}
+
 div#searchBar{
   display: flex;
   flex-direction: row;
   // border: 1px solid $red;
   align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.09);
   i{
     font-size: 200%;
   }
@@ -74,6 +82,7 @@ button.mk {
   border: 1px solid transparent;
   width: 200px;
   color: white;
+  cursor: pointer;
 }
 
 button.mk-complete {
@@ -101,6 +110,7 @@ button.mk-complete2 {
   color: #586169;
   border: 1px solid $red;
   transition: 0.3s;
+  font-size: 14px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   &:hover{
     background: $red;
@@ -114,6 +124,7 @@ button.mk-completeDark {
   padding: 10px;
   margin-bottom: 1em;
   width: 200px;
+  font-size: 14px;
   color: white;
   border: 1px solid $red;
   transition: 0.3s;

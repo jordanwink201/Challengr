@@ -1,11 +1,11 @@
-
-<div class="flexContainer">
+<div class="flexContainer wow fadeIn">
   <h1 class="mk">Billing Info</h1>
 
   <div ng-init="profileCtrl.getBilling()" class="flex column">
 
     <p class="mk" ng-show="profileCtrl.transactions.length === 0">Currently, no transactions have been made</p>
 
+    
     <ul class="list-group billings noCenterTxt">
       <li class="list-group-item" ng-repeat="transaction in profileCtrl.transactions">
         <span class="date">{{transaction.created | date : fullDate}}</span>
@@ -14,6 +14,7 @@
         <img ng-src="{{transaction.imgUrl}}">
       </li>
     </ul>
+
 
   </div>
 </div>

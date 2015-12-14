@@ -7,30 +7,34 @@ Newsfeed in main view
 
 <label class="mk bottomPadding centerTxt marginTop4" ng-if="globalLeftDetailView" id="top">Challenge Feed</label>  
 
+<!-- <div ng-include=" 'partial/alert.html' "></div> -->
+
 <!-- Search Bar -->
 <div ng-init="newsfeedCtrl.read()" id="searchBar" class="marginTop leftSidePadding" ng-if="globalLeftDetailView">
   <i class="mk icon-budicon-44"></i>  
   <input type="text" id="searchInput" class="form-control" placeholder="Search..." ng-model="challengeSearch">
 </div>
 
-<p class="mk" ng-show="newsfeedCtrl.challenges.length === 0" ng-if="globalLeftDetailView">Currently, no challenges have been made</p>
+<!-- <p class="mk" ng-if="newsfeedCtrl.challenges.length === 0" ng-if="globalLeftDetailView">Currently, no challenges have been made</p> -->
 
-<!-- Challenges -->
-<challenge ng-if="globalLeftDetailView" ng-repeat="challenge in newsfeedCtrl.challenges | filter : challengeSearch"
-  challengeid = 'challenge.id',
-  challengechallenged = 'challenge.Challenged',
-  challengechallenger = 'challenge.Challenger',
-  charityamount = 'challenge.charityAmount',
-  title = 'challenge.title',
-  description = 'challenge.description',
-  likes = 'challenge.likes',
-  completeddate = 'challenge.completed',
-  expiresdate = 'challenge.expiresDate',
-  issueddate = 'challenge.issuedDate',
-  completed = 'challenge.completed',
-  notcompleted = 'challenge.notCompleted',
-  type = 'challenge.type'>
-</challenge>
+<div class="scroll wow fadeIn">
+  <!-- Challenges -->
+  <challenge ng-if="globalLeftDetailView" ng-repeat="challenge in newsfeedCtrl.challenges | filter : challengeSearch"
+    challengeid = 'challenge.id',
+    challengechallenged = 'challenge.Challenged',
+    challengechallenger = 'challenge.Challenger',
+    charityamount = 'challenge.charityAmount',
+    title = 'challenge.title',
+    description = 'challenge.description',
+    likes = 'challenge.likes',
+    completeddate = 'challenge.completed',
+    expiresdate = 'challenge.expiresDate',
+    issueddate = 'challenge.issuedDate',
+    completed = 'challenge.completed',
+    notcompleted = 'challenge.notCompleted',
+    type = 'challenge.type'>
+  </challenge>
+</div>
 
 <!-- Braintree Management -->
 <!-- <div ng-init="homeCtrl.getBraintreeCustomers()"></div> -->
