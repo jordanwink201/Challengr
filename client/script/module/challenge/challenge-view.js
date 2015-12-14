@@ -70,7 +70,7 @@ angular.module('App.challengeView', [])
     var now = moment();
     var difference = now.diff(issue, 'hours');
 
-    if (difference >= 1) {
+    if (difference >= 24) {
       if (self.challenge.notCompleted === false && self.challenge.completed === false) {
         // set the challenge to be completed
         self.challenge.notCompleted = true;
