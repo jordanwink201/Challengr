@@ -87,8 +87,7 @@ angular.module('App.newChallenge', [])
         };
         socket.emit('newChallenge', challenge);
         loadingService.stopSpin();
-        console.log('challenge : ', challenge);
-        alertService.addAlert('success', 'Challenge created', 'icon-checkbox');
+        alertService.addAlert('success', 'You\'ve challenged ' + challengeService.challenge.challenged.firstName + ' ' + challengeService.challenge.challenged.lastName, 'icon-checkbox');
       })
       .catch(function (err) {
         console.log('error creating challenge... : ', err);
@@ -133,11 +132,11 @@ angular.module('App.newChallenge', [])
         })
         .catch(function (err) {
           console.log('error getting braintree token: ', err);
-          alertService.addAlert('danger', err, 'icon-budicon-57');
+          alertService.addAlert('danger', 'error please refresh the page', 'icon-budicon-57');
         });
     } else {
       console.log('error getting braintree token from local storage...');
-      alertService.addAlert('danger', 'error getting braintree token from local storage', 'icon-budicon-57');
+      alertService.addAlert('danger', 'error please refresh the page', 'icon-budicon-57');
     }
   };
 

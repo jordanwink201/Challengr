@@ -54,7 +54,7 @@ angular.module('App.challengeView', [])
 
   self.completed = function () {
     self.challenge.completed = true;
-    alertService.addAlert('success', 'Successfuly marked challenge completed', 'icon-checkbox');
+    alertService.addAlert('success', 'Challenge Completed', 'icon-checkbox');
     var updateObj = {
       id: self.challenge.id,
       completed: true

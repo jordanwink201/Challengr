@@ -40,7 +40,7 @@ angular.module('App.profile', [])
               .then(function () {
                 // Add the location to the user
                 localStorage.setItem('com.challengr.photoURL', data.imageURL);
-                alertService.addAlert('success', 'updated profile image', 'icon-checkbox');
+                alertService.addAlert('success', 'Updated profile image', 'icon-checkbox');
                 self.photoURL = data.imageURL;
                 self.getUserInfo();
               })
