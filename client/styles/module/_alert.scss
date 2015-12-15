@@ -17,8 +17,19 @@ i.icon-budicon-55 {
 }
 
 #authAlert{
+  position: absolute;
+  top: 1em;
+  right: 0em;
+  width: 300px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  z-index: 9999;
+  box-shadow: 1px 1px 20px rgba(0,0,0,0.25);
+  border-radius: 4px;
   .alert{
     margin-bottom: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   .alertIcon, .alertText{
     
