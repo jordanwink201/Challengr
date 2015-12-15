@@ -54,13 +54,25 @@ div#challengeDetail {
         position: absolute;
         bottom: 0;
         left: 0px;
-        width: 40%;
-        min-height: 40%;
+        // width: 40%;
+        // min-height: 40%;
+        max-height: 40px;
+        max-width: 40px;
+        min-height: 40px;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
       }
       img.challengerImg {
-        width: 65%;
-        margin-left: 10px;
-        min-height: 65%;
+        // width: 65%;
+        // min-height: 65%;
+        max-height: 66px;
+        max-width: 66px;
+        min-height: 66px;
+        min-width: 66px;
+        width: 66px;
+        height: 66px;
+        margin-left: 15px;
       }
     }
     span{
