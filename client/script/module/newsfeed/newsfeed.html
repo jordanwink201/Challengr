@@ -17,9 +17,10 @@ Newsfeed in main view
 
 <!-- <p class="mk" ng-if="newsfeedCtrl.challenges.length === 0" ng-if="globalLeftDetailView">Currently, no challenges have been made</p> -->
 
-<div class="scroll wow fadeIn">
+<!-- <div class="scroll wow fadeIn"> -->
   <!-- Challenges -->
   <challenge ng-if="globalLeftDetailView" ng-repeat="challenge in newsfeedCtrl.challenges | filter : newsfeedCtrl.challengeSearch"
+    class="animation"
     challengeid = 'challenge.id',
     challengechallenged = 'challenge.Challenged',
     challengechallenger = 'challenge.Challenger',
@@ -34,7 +35,7 @@ Newsfeed in main view
     notcompleted = 'challenge.notCompleted',
     type = 'challenge.type'>
   </challenge>
-</div>
+<!-- </div> -->
 
 <!-- Braintree Management -->
 <!-- <div ng-init="homeCtrl.getBraintreeCustomers()"></div> -->
