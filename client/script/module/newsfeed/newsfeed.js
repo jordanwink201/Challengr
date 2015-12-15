@@ -62,7 +62,7 @@ angular.module('App.newsfeed', [])
           self.challenges = challenges;
           console.log('read all challenges : ', challenges);
           challengeService.challenges = challenges;
-          getChallengeTimer = $timeout(tick, 2000);
+          getChallengeTimer = $timeout(tick, 5000);
         })
         .catch(function (err) {
           console.log('error : ', err);
