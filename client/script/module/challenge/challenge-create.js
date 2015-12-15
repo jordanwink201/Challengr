@@ -63,7 +63,7 @@ angular.module('App.newChallenge', [])
       })
       .catch(function (err) {
         console.log('error loading charities...');
-        alertService.addAlert('danger', 'error loading charities', 'icon-budicon-57');
+        alertService.addAlert('danger', 'error please refresh the page', 'icon-budicon-57');
       });
   };
 
@@ -87,11 +87,12 @@ angular.module('App.newChallenge', [])
         };
         socket.emit('newChallenge', challenge);
         loadingService.stopSpin();
+        console.log('challenge : ', challenge);
         alertService.addAlert('success', 'Challenge created', 'icon-checkbox');
       })
       .catch(function (err) {
         console.log('error creating challenge... : ', err);
-        alertService.addAlert('danger', err, 'icon-budicon-57');
+        alertService.addAlert('danger', 'error please try again', 'icon-budicon-57');
       });
   };
 
