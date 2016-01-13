@@ -3,6 +3,8 @@
 
   **Challengr** is a social challenging app where you can challenge your friends to complete the tasks that are long overdue and help them achieve their goals.
   
+  **Challengr Promo Video** https://youtu.be/BAItNZmtzjY
+  
   Check **Challengr** out on [challengr.io](http://challengr.io). Also check out the repo for our mobile app built in React Native [here](https://github.com/hacksquare/Challengr-Native)
 
 ##Specifics
