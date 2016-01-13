@@ -34,7 +34,7 @@
   ![](https://s3-us-west-2.amazonaws.com/challengrimages/screenshots/techStack.png)
 
 ##Screenshots
-  ![](https://s3-us-west-2.amazonaws.com/challengrimages/screenshots/example.png)
+  ![](https://s3-us-west-2.amazonaws.com/challengrimages/screenshots/exampleWeb.png)
 
 ### Polling for Challenges
 - every 2000 ms
