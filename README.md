@@ -1,5 +1,5 @@
 #Challengr
-  ![](screenshots/challengrMobileSM.jpg)
+  ![](https://s3-us-west-2.amazonaws.com/challengrimages/screenshots/challengrMobileSM.jpg)
 
   **Challengr** is a social challenging app where you can challenge your friends to complete the tasks that are long overdue and help them achieve their goals.
   
@@ -13,7 +13,7 @@
   - Bower 1.6.x
 
 ##Architecture
-  ![](screenshots/architecture.jpg)
+  ![](https://s3-us-west-2.amazonaws.com/challengrimages/screenshots/architecture.jpg)
 
 ##Development
 
@@ -31,16 +31,10 @@
     ```
 
 ##Technologies
-  ![](screenshots/techStack.png)
+  ![](https://s3-us-west-2.amazonaws.com/challengrimages/screenshots/techStack.png)
 
 ##Screenshots
-  ![](screenshots/example.png)
-  
-### Known Issues & Future Optimizations
-  When a challenge is active, the countdown timer is not calculated for the user challenges feed.
-  Optimized for Chrome v.30+
-  -> formate issues on Safari
-  -> firefox 'event.toElement' event is undefined, cannot view detail of challenge
+  ![](https://s3-us-west-2.amazonaws.com/challengrimages/screenshots/example.png)
 
 ### Polling for Challenges
 - every 2000 ms
@@ -48,7 +42,7 @@
 
 ### Disclaimer
 - Optimized for Chrome
-- All payments are in Sandbox mode, no real transactions will take place. Can you paypal or testing credit card # 4111 1111 1111 1111 exp: anything after 2015 ex: 11/19
+- All payments are in Sandbox mode, no real transactions will take place. Can use paypal or testing credit card # 4111 1111 1111 1111 exp: anything after 2015 ex: 11/19
 
 ##Team
   - Faisal Al Qasimi
